@@ -1,7 +1,7 @@
 {
-  "name": "stencil-component",
-  "private": true,
-  "version": "0.0.2",
+  "name": "my-component",
+  "private": false,
+  "version": "0.0.3",
   "description": "Stencil App Starter",
   "files": [
     "dist/"
@@ -24,16 +24,11 @@
     "@types/jest": "^21.1.1",
     "jest": "^21.2.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
-  },
   "author": "Ionic Team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ionic-team/stencil"
   },
-  "homepage": "https://github.com/ionic-team/stencil",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"

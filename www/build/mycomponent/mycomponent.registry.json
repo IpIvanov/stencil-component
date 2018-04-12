@@ -2,11 +2,11 @@
   "namespace": "mycomponent",
   "fsNamespace": "mycomponent",
   "loader": "../mycomponent.js",
-  "core": "mycomponent.l09ggdbn.js",
-  "corePolyfilled": "mycomponent.q5501jbq.js",
+  "corePolyfilled": "es5-build-disabled.js",
+  "core": "mycomponent.core.js",
   "components": {
     "my-component": {
-      "$": "o70a0g6k"
+      "$": "my-component"
     }
   }
 }

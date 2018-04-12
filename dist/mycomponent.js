@@ -1,2 +1,100 @@
 /*! Built with http://stenciljs.com */
-!function(e,t,n,r,o,i,s,c,u,l,m,a){for((e.mycomponent=e.mycomponent||{}).components=u,e.customElements||(e.$whenDefined=[],e.customElements={whenDefined:function(t){return{then:function(n){e.$whenDefined.push([t,n])}}}}),(m=u.filter(function(e){return e[2]}).map(function(e){return e[0]})).length&&((l=t.createElement("style")).innerHTML=m.join()+"{visibility:hidden}.hydrated{visibility:inherit}",l.setAttribute("data-styles",""),t.head.insertBefore(l,t.head.firstChild)),l=(m=t.querySelectorAll("script")).length-1;l>=0&&!(a=m[l]).src&&!a.hasAttribute("data-resources-url");l--);(m=a.getAttribute("data-resources-url"))&&(o=m),!o&&a.src&&(o=(m=a.src.split("/").slice(0,-1)).join("/")+(m.length?"/":"")+"mycomponent/"),l=t.createElement("script"),function(e,t,n,r){return!(t.search.indexOf("core=esm")>0)&&(!(!(t.search.indexOf("core=es5")>0||"file:"===t.protocol)&&e.customElements&&e.customElements.define&&e.fetch&&e.CSS&&e.CSS.supports&&e.CSS.supports("color","var(--c)")&&"noModule"in n)||function(e){try{return new Function('import("")'),!1}catch(e){}return!0}())}(e,e.location,l)?l.src=o+"mycomponent.q5501jbq.js":(l.src=o+"mycomponent.l09ggdbn.js",l.setAttribute("type","module"),l.setAttribute("crossorigin",!0)),l.setAttribute("data-resources-url",o),l.setAttribute("data-namespace","mycomponent"),t.head.appendChild(l)}(window,document,0,0,0,0,0,0,[["my-component","o70a0g6k",1,[["first",1,0,1,2],["last",1,0,1,2]],1]],void 0);
+(function(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components) {
+
+function init(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCorePolyfilled, hydratedCssClass, components, x, y, scriptElm) {
+    // create global namespace if it doesn't already exist
+    (win[namespace] = win[namespace] || {}).components = components;
+    if (!win.customElements) {
+        // temporary customElements polyfill only for "whenDefined"
+        // this is incase customElements.whenDefined('my-tag') is
+        // used before the polyfill is downloaded
+        win.$whenDefined = [];
+        win.customElements = {
+            whenDefined: function (tag) {
+                return {
+                    then: function (cb) {
+                        win.$whenDefined.push([tag, cb]);
+                    }
+                };
+            }
+        };
+    }
+    y = components.filter(function (c) { return c[2]; }).map(function (c) { return c[0]; });
+    if (y.length) {
+        // auto hide components until they been fully hydrated
+        // reusing the "x" and "i" variables from the args for funzies
+        x = doc.createElement('style');
+        x.innerHTML = y.join() + '{visibility:hidden}.' + hydratedCssClass + '{visibility:inherit}';
+        x.setAttribute('data-styles', '');
+        doc.head.insertBefore(x, doc.head.firstChild);
+    }
+    // figure out the script element for this current script
+    y = doc.querySelectorAll('script');
+    for (x = y.length - 1; x >= 0; x--) {
+        scriptElm = y[x];
+        if (scriptElm.src || scriptElm.hasAttribute('data-resources-url')) {
+            break;
+        }
+    }
+    // get the resource path attribute on this script element
+    y = scriptElm.getAttribute('data-resources-url');
+    if (y) {
+        // the script element has a data-resources-url attribute, always use that
+        resourcesUrl = y;
+    }
+    if (!resourcesUrl && scriptElm.src) {
+        // we don't have an exact resourcesUrl, so let's
+        // figure it out relative to this script's src and app's filesystem namespace
+        y = scriptElm.src.split('/').slice(0, -1);
+        resourcesUrl = (y.join('/')) + (y.length ? '/' : '') + fsNamespace + '/';
+    }
+    // request the core this browser needs
+    // test for native support of custom elements and fetch
+    // if either of those are not supported, then use the core w/ polyfills
+    // also check if the page was build with ssr or not
+    x = doc.createElement('script');
+    if (usePolyfills(win, win.location, x, 'import("")')) {
+        x.src = resourcesUrl + appCorePolyfilled;
+    }
+    else {
+        x.src = resourcesUrl + appCore;
+        x.setAttribute('type', 'module');
+        x.setAttribute('crossorigin', true);
+    }
+    x.setAttribute('data-resources-url', resourcesUrl);
+    x.setAttribute('data-namespace', fsNamespace);
+    doc.head.appendChild(x);
+}
+function usePolyfills(win, location, scriptElm, dynamicImportTest) {
+    // fyi, dev mode has verbose if/return statements
+    // but it minifies to a nice 'lil one-liner ;)
+    if (location.search.indexOf('core=esm') > 0) {
+        // force es2015 build
+        return false;
+    }
+    if ((location.search.indexOf('core=es5') > 0) ||
+        (location.protocol === 'file:') ||
+        // Need to look for define specifically because we polyfill customElements
+        // above to support whenDefined.
+        (!(win.customElements && win.customElements.define)) ||
+        (!win.fetch) ||
+        (!(win.CSS && win.CSS.supports && win.CSS.supports('color', 'var(--c)'))) ||
+        (!('noModule' in scriptElm))) {
+        // force es5 build w/ polyfills
+        return true;
+    }
+    return doesNotSupportsDynamicImports(dynamicImportTest);
+}
+function doesNotSupportsDynamicImports(dynamicImportTest) {
+    try {
+        new Function(dynamicImportTest);
+        return false;
+    }
+    catch (e) { }
+    return true;
+}
+
+
+init(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components);
+
+})(window, document, "mycomponent","mycomponent",0,"mycomponent.core.js","es5-build-disabled.js","hydrated",[["my-component","my-component",1,[["first",1,0,1,2],["last",1,0,1,2]],1]]);

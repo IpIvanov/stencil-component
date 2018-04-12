@@ -1,15 +1,13 @@
 export class MyComponent {
-    constructor() {
-        this.isVisible = true;
-    }
     render() {
-        return (h("p", null,
-            "Hello, my name is ",
+        return (h("div", null,
+            "Hello, World! I'm ",
             this.first,
             " ",
             this.last));
     }
     static get is() { return "my-component"; }
-    static get properties() { return { "first": { "type": String, "attr": "first" }, "isVisible": { "state": true }, "last": { "type": String, "attr": "last" } }; }
+    static get encapsulation() { return "shadow"; }
+    static get properties() { return { "first": { "type": String, "attr": "first" }, "last": { "type": String, "attr": "last" } }; }
     static get style() { return "/**style-placeholder:my-component:**/"; }
 }

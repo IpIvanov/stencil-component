@@ -1,57 +1,6 @@
 {
   "components": [
     {
-      "tag": "app-home",
-      "dependencies": [
-        "my-component",
-        "stencil-route-link"
-      ],
-      "componentClass": "AppHome",
-      "componentPath": "components/app-home/app-home.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/app-home/app-home.css"
-          ]
-        }
-      }
-    },
-    {
-      "tag": "app-profile",
-      "dependencies": [],
-      "componentClass": "AppProfile",
-      "componentPath": "components/app-profile/app-profile.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/app-profile/app-profile.css"
-          ]
-        }
-      },
-      "props": [
-        {
-          "name": "match",
-          "attr": "match"
-        }
-      ]
-    },
-    {
-      "tag": "my-app",
-      "dependencies": [
-        "stencil-route",
-        "stencil-router"
-      ],
-      "componentClass": "MyApp",
-      "componentPath": "components/my-app/my-app.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/my-app/my-app.css"
-          ]
-        }
-      }
-    },
-    {
       "tag": "my-component",
       "dependencies": [],
       "componentClass": "MyComponent",
@@ -75,34 +24,14 @@
           "attr": "last"
         }
       ],
-      "states": [
-        {
-          "name": "isVisible"
-        }
-      ]
+      "shadow": true
     }
   ],
-  "collections": [
-    {
-      "name": "@stencil/router",
-      "tags": [
-        "stencil-async-content",
-        "stencil-route",
-        "stencil-route-link",
-        "stencil-route-title",
-        "stencil-router",
-        "stencil-router-redirect",
-        "test-app",
-        "test-demo-four",
-        "test-demo-six",
-        "test-demo-three"
-      ]
-    }
-  ],
+  "collections": [],
   "compiler": {
     "name": "@stencil/core",
-    "version": "0.7.15",
-    "typescriptVersion": "2.8.1"
+    "version": "0.7.7",
+    "typescriptVersion": "2.7.2"
   },
   "bundles": []
 }

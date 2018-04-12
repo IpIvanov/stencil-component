@@ -1,0 +1,12 @@
+{
+  "namespace": "mycomponent",
+  "fsNamespace": "mycomponent",
+  "loader": "../mycomponent.js",
+  "core": "mycomponent.l09ggdbn.js",
+  "corePolyfilled": "mycomponent.q5501jbq.js",
+  "components": {
+    "my-component": {
+      "$": "o70a0g6k"
+    }
+  }
+}

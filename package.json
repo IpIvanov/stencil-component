@@ -1,37 +1,40 @@
 {
   "name": "my-component",
-  "private": false,
-  "version": "0.0.3",
-  "description": "Stencil App Starter",
-  "main": "dist/my-component.js",
-  "types": "dist/types/components.d.ts",
+  "version": "0.0.5",
+  "description": "Stencil Component Starter",
+  "main": "dist/mycomponent.js",
+  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
   ],
+  "browser": "dist/mycomponent.js",
   "scripts": {
-    "build": "stencil build --prerender",
+    "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
     "test": "jest --no-cache",
     "test.watch": "jest --watch --no-cache"
   },
-  "dependencies": {
-    "@stencil/core": "0.7.15",
-    "@stencil/router": "latest"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@stencil/core": "0.7.7",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
     "jest": "^21.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
   },
   "author": "Ionic Team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ionic-team/stencil"
   },
+  "homepage": "https://github.com/ionic-team/stencil",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"

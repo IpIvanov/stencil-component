@@ -22,64 +22,36 @@ importScripts(
  */
 self.__precacheManifest = [
   {
-    "url": "assets/icon/favicon.ico",
-    "revision": "d2f619d796fbe8bed6200da2691aa5b6"
+    "url": "build/mycomponent.js",
+    "revision": "1b9abf5e5f415d7752b0ee64c2bb2726"
   },
   {
-    "url": "assets/icon/icon.png",
-    "revision": "b96ad6e1e0b755c8cd45e6aec40bca25"
+    "url": "build/mycomponent/mycomponent.l09ggdbn.js",
+    "revision": "e4b496018ea155b84d4d15b052e53168"
   },
   {
-    "url": "build/app.js",
-    "revision": "259a273b249789161afb85e34b46eaa9"
+    "url": "build/mycomponent/mycomponent.q5501jbq.js",
+    "revision": "3f33962edc7df8f871dd3801a662cf6c"
   },
   {
-    "url": "build/app/5tm4poyt.es5.js",
-    "revision": "43dc3554815f462a949c8ff3e9e0212f"
+    "url": "build/mycomponent/o70a0g6k.es5.js",
+    "revision": "8345feeb358caccd32a1e618af120c2c"
   },
   {
-    "url": "build/app/5tm4poyt.js",
-    "revision": "20c13f36438cdd30511ee76e44819995"
+    "url": "build/mycomponent/o70a0g6k.js",
+    "revision": "826b0367b9fb40b95906585eb3906ed8"
   },
   {
-    "url": "build/app/app.amidjviq.js",
-    "revision": "c0d8ebb92b07631920dbf51cdf55bad6"
+    "url": "build/mycomponent/o70a0g6k.sc.es5.js",
+    "revision": "8345feeb358caccd32a1e618af120c2c"
   },
   {
-    "url": "build/app/app.sje2ksse.js",
-    "revision": "d5395105023ecc178506374a762de3a9"
-  },
-  {
-    "url": "build/app/at3rgw4r.es5.js",
-    "revision": "e848179b3bb61750272b224443d10ff0"
-  },
-  {
-    "url": "build/app/at3rgw4r.js",
-    "revision": "3543e34fecef943048f7254d76be3f7a"
-  },
-  {
-    "url": "build/app/chunk1.es5.js",
-    "revision": "b4112d97ee19937d56d357446d85070c"
-  },
-  {
-    "url": "build/app/chunk1.js",
-    "revision": "062a09e8f97dc59680f969fc9ab041d8"
-  },
-  {
-    "url": "build/app/loettoy3.es5.js",
-    "revision": "341012f0e5919e03a63ef7878f559096"
-  },
-  {
-    "url": "build/app/loettoy3.js",
-    "revision": "b9c0b704c6a7571852e1884c41388781"
+    "url": "build/mycomponent/o70a0g6k.sc.js",
+    "revision": "826b0367b9fb40b95906585eb3906ed8"
   },
   {
     "url": "index.html",
-    "revision": "94baffa705382c768167495aaa2ddb81"
-  },
-  {
-    "url": "manifest.json",
-    "revision": "0c129721ede7cd25304ebdd238d774ad"
+    "revision": "383334994515348d07f8c9d25f4c15a4"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();

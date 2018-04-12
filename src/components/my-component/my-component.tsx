@@ -1,22 +1,20 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'my-component',
-  styleUrl: 'my-component.css'
+  styleUrl: 'my-component.css',
+  shadow: true
 })
 export class MyComponent {
-  // Indicate that name should be a property on our new component
+
   @Prop() first: string;
-
   @Prop() last: string;
-
-  @State() isVisible: boolean = true;
 
   render() {
     return (
-      <p>
-        Hello, my name is {this.first} {this.last}
-      </p>
+      <div>
+        Hello, World! I'm {this.first} {this.last}
+      </div>
     );
   }
 }

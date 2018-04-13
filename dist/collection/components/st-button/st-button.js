@@ -2,11 +2,11 @@ export class StButton {
     constructor() {
         this.size = 'small';
     }
-    buttonClickedHandler(event) {
-        this.buttonClicked.emit(event);
+    buttonClickedHandler(size) {
+        this.buttonClicked.emit({ buttonSize: size });
     }
     render() {
-        return (h("button", { type: "button", class: `st-button st-button--${this.size} st-button--${this.type}`, onClick: (event) => this.buttonClickedHandler(event) },
+        return (h("button", { type: "button", class: `st-button st-button--${this.size} st-button--${this.type}`, onClick: () => this.buttonClickedHandler(this.size) },
             h("slot", null)));
     }
     static get is() { return "st-button"; }

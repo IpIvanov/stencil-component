@@ -23,15 +23,15 @@ importScripts(
 self.__precacheManifest = [
   {
     "url": "build/stbutton.js",
-    "revision": "151c46683b309ec9928ee3f7636fa758"
+    "revision": "ce22b3b4380cd9034e6817a10b8b064c"
   },
   {
-    "url": "build/stbutton/efwwr1il.es5.js",
-    "revision": "731f71bcca5d3e9a7a1db8daf73ef966"
+    "url": "build/stbutton/c6eyoynh.es5.js",
+    "revision": "4dcd9f5c53fb366cf32c679a20cb7290"
   },
   {
-    "url": "build/stbutton/efwwr1il.js",
-    "revision": "40a0b9ffae00275c74cc4179ca625890"
+    "url": "build/stbutton/c6eyoynh.js",
+    "revision": "b5175f7a3ea6d84a044005f8aa050c87"
   },
   {
     "url": "build/stbutton/stbutton.p9iqk0wt.js",

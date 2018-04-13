@@ -4,6 +4,6 @@ export declare class StButton {
     size: string;
     type: string;
     buttonClicked: EventEmitter;
-    buttonClickedHandler(event: any): void;
+    buttonClickedHandler(size: string): void;
     render(): JSX.Element;
 }

@@ -12,13 +12,13 @@ export class StButton {
 
   @Event() buttonClicked: EventEmitter;
 
-  buttonClickedHandler(event: any) {
-    this.buttonClicked.emit(event);
+  buttonClickedHandler(size: string) {
+    this.buttonClicked.emit({buttonSize: size});
   }
 
   render() {
     return (
-      <button type="button" class={`st-button st-button--${this.size} st-button--${this.type}`} onClick={(event) => this.buttonClickedHandler(event)}>
+      <button type="button" class={`st-button st-button--${this.size} st-button--${this.type}`} onClick={() => this.buttonClickedHandler(this.size)}>
         <slot />
       </button>
     );

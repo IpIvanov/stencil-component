@@ -3,6 +3,7 @@ export class StButton {
         this.size = 'small';
     }
     buttonClickedHandler(event) {
+        alert('from component');
         this.buttonClicked.emit(event);
     }
     render() {

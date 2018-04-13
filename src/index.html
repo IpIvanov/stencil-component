@@ -20,6 +20,15 @@
     size="medium"
     size="large" 
     -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var stButton = document.querySelector('st-button');
+        stButton.addEventListener('buttonClicked', function(e) {
+          console.log(e.detail);
+        });
+      });
+    </script>
   </body>
 
 </html>

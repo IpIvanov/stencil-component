@@ -23,15 +23,7 @@ importScripts(
 self.__precacheManifest = [
   {
     "url": "build/stbutton.js",
-    "revision": "151c46683b309ec9928ee3f7636fa758"
-  },
-  {
-    "url": "build/stbutton/efwwr1il.es5.js",
-    "revision": "731f71bcca5d3e9a7a1db8daf73ef966"
-  },
-  {
-    "url": "build/stbutton/efwwr1il.js",
-    "revision": "40a0b9ffae00275c74cc4179ca625890"
+    "revision": "49ef6797ba0053a5433c4a36a7851eee"
   },
   {
     "url": "build/stbutton/stbutton.p9iqk0wt.js",
@@ -42,8 +34,16 @@ self.__precacheManifest = [
     "revision": "f148de4b32095101d8fb837bbe9216c7"
   },
   {
+    "url": "build/stbutton/vyi89vft.es5.js",
+    "revision": "b19b95e499d250904bb7ef632ec15d0b"
+  },
+  {
+    "url": "build/stbutton/vyi89vft.js",
+    "revision": "b31bf6e4684b556bc3133faacbc94b7e"
+  },
+  {
     "url": "index.html",
-    "revision": "8b24fe51cf53d8597870909571ff2829"
+    "revision": "f61a568867aa39da0ed262fbcfed3c88"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();

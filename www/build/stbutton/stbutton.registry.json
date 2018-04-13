@@ -1,0 +1,12 @@
+{
+  "namespace": "stbutton",
+  "fsNamespace": "stbutton",
+  "loader": "../stbutton.js",
+  "core": "stbutton.w13x5mdg.js",
+  "corePolyfilled": "stbutton.p9iqk0wt.js",
+  "components": {
+    "st-button": {
+      "$": "7xubkh3c"
+    }
+  }
+}

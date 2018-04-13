@@ -1,7 +1,7 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'stbutton',
   generateDistribution: true,
-  generateWWW: false
+  generateWWW: true
 };
 
 exports.devServer = {

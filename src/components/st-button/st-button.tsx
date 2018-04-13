@@ -14,7 +14,7 @@ export class StButton {
 
   buttonClickedHandler(event: any) {
     alert('from component');
-    this.buttonClicked.emit(event);
+    this.buttonClicked.emit({fromComponent: true});
   }
 
   render() {

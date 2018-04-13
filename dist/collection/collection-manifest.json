@@ -27,6 +27,9 @@
       "events": [
         {
           "event": "buttonClicked"
+        },
+        {
+          "event": "ionFocus"
         }
       ]
     }

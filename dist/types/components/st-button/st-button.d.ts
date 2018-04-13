@@ -5,5 +5,7 @@ export declare class StButton {
     type: string;
     buttonClicked: EventEmitter;
     buttonClickedHandler(event: any): void;
+    ionFocus: EventEmitter<FocusEvent>;
+    onFocus(): void;
     render(): JSX.Element;
 }

@@ -1,6 +1,6 @@
 {
   "name": "st-button",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Stencil Button component",
   "main": "dist/stbutton.js",
   "types": "dist/types/index.d.ts",

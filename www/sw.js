@@ -23,7 +23,15 @@ importScripts(
 self.__precacheManifest = [
   {
     "url": "build/stbutton.js",
-    "revision": "e90422c6f77e0332627324e51e916524"
+    "revision": "151c46683b309ec9928ee3f7636fa758"
+  },
+  {
+    "url": "build/stbutton/efwwr1il.es5.js",
+    "revision": "731f71bcca5d3e9a7a1db8daf73ef966"
+  },
+  {
+    "url": "build/stbutton/efwwr1il.js",
+    "revision": "40a0b9ffae00275c74cc4179ca625890"
   },
   {
     "url": "build/stbutton/stbutton.p9iqk0wt.js",
@@ -32,14 +40,6 @@ self.__precacheManifest = [
   {
     "url": "build/stbutton/stbutton.w13x5mdg.js",
     "revision": "f148de4b32095101d8fb837bbe9216c7"
-  },
-  {
-    "url": "build/stbutton/x42owxtg.es5.js",
-    "revision": "1a04b35989f223c2a638a0cf0fc2930b"
-  },
-  {
-    "url": "build/stbutton/x42owxtg.js",
-    "revision": "8fe906dbbdac1f97449938aada2ceb4a"
   },
   {
     "url": "index.html",

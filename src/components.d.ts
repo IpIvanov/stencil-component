@@ -23,9 +23,6 @@ declare global {
   interface HTMLAttributes {}
 }
 
-import {
-  EventEmitter,
-} from '@stencil/core';
 
 declare global {
   interface HTMLStButtonElement extends HTMLStencilElement {
@@ -50,7 +47,6 @@ declare global {
   namespace JSXElements {
     export interface StButtonAttributes extends HTMLAttributes {
       'onButtonClicked'?: (event: CustomEvent) => void;
-      'onIonFocus'?: (event: CustomEvent<FocusEvent>) => void;
       'size'?: string;
       'type'?: string;
     }

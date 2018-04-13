@@ -13,6 +13,7 @@ export class StButton {
   @Event() buttonClicked: EventEmitter;
 
   buttonClickedHandler(event: any) {
+    console.log(event)
     this.buttonClicked.emit(event);
   }
 

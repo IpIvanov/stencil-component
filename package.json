@@ -1,7 +1,7 @@
 {
-  "name": "my-component",
-  "version": "0.0.7",
-  "description": "Stencil Component Starter",
+  "name": "st-button",
+  "version": "0.0.9",
+  "description": "Stencil Button component",
   "main": "dist/stbutton.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",

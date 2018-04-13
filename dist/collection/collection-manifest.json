@@ -19,11 +19,6 @@
           "attr": "size"
         },
         {
-          "name": "title",
-          "type": "String",
-          "attr": "title"
-        },
-        {
           "name": "type",
           "type": "String",
           "attr": "type"

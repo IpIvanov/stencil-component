@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
-  <script src="/build/stbutton.js"></script>
 
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Stencil Component Starter</title>
+    <script src="/build/stbutton.js"></script>
 
-  <st-button size="large"></st-button>
-  <!-- type="warn" -->
-  <!-- title="Click" -->
-</body>
+  </head>
+
+  <body>
+
+    <st-button size="large">Click me!</st-button>
+    <!-- type="warn" -->
+    <!-- type="secondary" -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var button = document.querySelector('st-button');
+        button.addEventListener('buttonClicked', function(e) {
+          console.log(e);
+        });
+      });
+    </script>
+  </body>
+
 </html>

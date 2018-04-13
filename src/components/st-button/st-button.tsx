@@ -14,12 +14,19 @@ export class StButton {
 
   buttonClickedHandler(event: any) {
     alert('from component');
-    this.buttonClicked.emit({fromComponent: true});
+    this.buttonClicked.emit(event);
+  }
+  //onClick={(event) => this.buttonClickedHandler(event)} 
+
+  @Event() ionFocus: EventEmitter<FocusEvent>;
+
+  onFocus() {
+    this.ionFocus.emit();
   }
 
   render() {
     return (
-      <button type="button" class={`st-button st-button--${this.size} st-button--${this.type}`} onClick={(event) => this.buttonClickedHandler(event)}>
+      <button type="button" class={`st-button st-button--${this.size} st-button--${this.type}`} onFocus={this.onFocus.bind(this)}>
         <slot />
       </button>
     );

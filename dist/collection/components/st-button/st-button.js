@@ -1,7 +1,4 @@
 export class StButton {
-    constructor() {
-        this.size = 'small';
-    }
     buttonClickedHandler(size) {
         this.buttonClicked.emit({ buttonSize: size });
     }

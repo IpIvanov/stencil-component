@@ -14,9 +14,14 @@
       },
       "props": [
         {
-          "name": "size",
+          "name": "buttonSize",
           "type": "String",
-          "attr": "size"
+          "attr": "button-size"
+        },
+        {
+          "name": "buttonType",
+          "type": "String",
+          "attr": "button-type"
         }
       ],
       "events": [

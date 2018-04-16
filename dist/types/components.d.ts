@@ -27,7 +27,8 @@ declare global {
 
 declare global {
   interface HTMLStButtonElement extends HTMLStencilElement {
-    'size': string;
+    'buttonSize': string;
+    'buttonType': string;
   }
   var HTMLStButtonElement: {
     prototype: HTMLStButtonElement;
@@ -46,8 +47,9 @@ declare global {
   }
   namespace JSXElements {
     export interface StButtonAttributes extends HTMLAttributes {
+      'buttonSize'?: string;
+      'buttonType'?: string;
       'onButtonClicked'?: (event: CustomEvent) => void;
-      'size'?: string;
     }
   }
 }

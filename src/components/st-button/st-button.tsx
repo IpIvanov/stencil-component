@@ -6,10 +6,7 @@ import { Component, Prop, Event, EventEmitter } from '@stencil/core';
   shadow: true
 })
 export class StButton {
-  @Prop() options: any = {
-    size: 'small',
-    type: 'primary'
-  };
+  @Prop() size: string = 'medium';
 
   @Event() buttonClicked: EventEmitter;
 
@@ -19,7 +16,7 @@ export class StButton {
 
   render() {
     return (
-      <button type="button" class={`st-button st-button--${this.options.size} st-button--${this.options.type}`} onClick={() => this.buttonClickedHandler(this.options.size)}>
+      <button type="button" class={`st-button st-button--${this.size}`} onClick={() => this.buttonClickedHandler(this.size)}>
         <slot />
       </button>
     );

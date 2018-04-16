@@ -14,9 +14,9 @@
       },
       "props": [
         {
-          "name": "options",
-          "type": "Any",
-          "attr": "options"
+          "name": "size",
+          "type": "String",
+          "attr": "size"
         }
       ],
       "events": [

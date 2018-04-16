@@ -28,7 +28,8 @@
         {
           "event": "buttonClicked"
         }
-      ]
+      ],
+      "shadow": true
     }
   ],
   "collections": [],

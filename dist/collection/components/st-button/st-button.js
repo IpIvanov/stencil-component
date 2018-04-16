@@ -1,4 +1,8 @@
 export class StButton {
+    constructor() {
+        this.size = 'small';
+        this.type = 'primary';
+    }
     buttonClickedHandler(size) {
         this.buttonClicked.emit({ buttonSize: size });
     }
@@ -7,6 +11,7 @@ export class StButton {
             h("slot", null)));
     }
     static get is() { return "st-button"; }
+    static get encapsulation() { return "shadow"; }
     static get properties() { return { "size": { "type": String, "attr": "size" }, "type": { "type": String, "attr": "type" } }; }
     static get events() { return [{ "name": "buttonClicked", "method": "buttonClicked", "bubbles": true, "cancelable": true, "composed": true }]; }
     static get style() { return "/**style-placeholder:st-button:**/"; }

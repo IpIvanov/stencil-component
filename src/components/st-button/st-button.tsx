@@ -3,12 +3,12 @@ import { Component, Prop, Event, EventEmitter } from '@stencil/core';
 @Component({
   tag: 'st-button',
   styleUrl: 'st-button.css',
-  shadow: false
+  shadow: true
 })
 export class StButton {
 
-  @Prop() size: string;
-  @Prop() type: string;
+  @Prop() size: string = 'small';
+  @Prop() type: string = 'primary';
 
   @Event() buttonClicked: EventEmitter;
 
